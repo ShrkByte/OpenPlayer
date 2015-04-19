@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2015-04-17T20:46:24Z</created><keywords></keywords><modified>2015-04-17T20:46:24Z</modified><revision></revision><subject></subject><title></title><unit meter="0.025400" name="centimeter"></unit><up_axis>Z_UP</up_axis></asset>
+  <library_materials>
+    <material id="_01 - Default" name="_01 - Default">
+      <instance_effect url="#_01 - Default-fx"/>
+    </material>
+    <material id="_01 - Default_ncl1_1" name="_01 - Default_ncl1_1">
+      <instance_effect url="#_01 - Default_ncl1_1-fx"/>
+    </material>
+    <material id="_01 - Default_ncl1_2" name="_01 - Default_ncl1_2">
+      <instance_effect url="#_01 - Default_ncl1_2-fx"/>
+    </material>
+    <material id="_01 - Default_ncl1_3" name="_01 - Default_ncl1_3">
+      <instance_effect url="#_01 - Default_ncl1_3-fx"/>
+    </material>
+    <material id="_01 - Default_ncl1_4" name="_01 - Default_ncl1_4">
+      <instance_effect url="#_01 - Default_ncl1_4-fx"/>
+    </material>
+    <material id="_01 - Default_ncl1_5" name="_01 - Default_ncl1_5">
+      <instance_effect url="#_01 - Default_ncl1_5-fx"/>
+    </material>
+    <material id="_01 - Default_ncl1_6" name="_01 - Default_ncl1_6">
+      <instance_effect url="#_01 - Default_ncl1_6-fx"/>
+    </material>
+    <material id="_01 - Default_ncl1_7" name="_01 - Default_ncl1_7">
+      <instance_effect url="#_01 - Default_ncl1_7-fx"/>
+    </material>
+    <material id="_01 - Default Slot #9" name="_01 - Default Slot #9">
+      <instance_effect url="#_01 - Default Slot #9-fx"/>
+    </material>
+    <material id="_01 - Default Slot #10" name="_01 - Default Slot #10">
+      <instance_effect url="#_01 - Default Slot #10-fx"/>
+    </material>
+    <material id="_01 - Default Slot #9_ncl1_1" name="_01 - Default Slot #9_ncl1_1">
+      <instance_effect url="#_01 - Default Slot #9_ncl1_1-fx"/>
+    </material>
+    <material id="_01 - Default Slot #10_ncl1_1" name="_01 - Default Slot #10_ncl1_1">
+      <instance_effect url="#_01 - Default Slot #10_ncl1_1-fx"/>
+    </material>
+    <material id="_01 - Default Slot #9_ncl1_2" name="_01 - Default Slot #9_ncl1_2">
+      <instance_effect url="#_01 - Default Slot #9_ncl1_2-fx"/>
+    </material>
+    <material id="_01 - Default Slot #10_ncl1_2" name="_01 - Default Slot #10_ncl1_2">
+      <instance_effect url="#_01 - Default Slot #10_ncl1_2-fx"/>
+    </material>
+    <material id="_01 - Default Slot #9_ncl1_3" name="_01 - Default Slot #9_ncl1_3">
+      <instance_effect url="#_01 - Default Slot #9_ncl1_3-fx"/>
+    </material>
+    <material id="_01 - Default Slot #10_ncl1_3" name="_01 - Default Slot #10_ncl1_3">
+      <instance_effect url="#_01 - Default Slot #10_ncl1_3-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_01 - Default-fx" name="_01 - Default">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">1.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">1.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default_ncl1_1-fx" name="_01 - Default_ncl1_1">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">1.000000  0.870588 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">1.000000  0.870588 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default_ncl1_2-fx" name="_01 - Default_ncl1_2">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.564706  1.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.564706  1.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default_ncl1_3-fx" name="_01 - Default_ncl1_3">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  1.000000 0.517647 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  1.000000 0.517647 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default_ncl1_4-fx" name="_01 - Default_ncl1_4">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  1.000000 0.917647 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  1.000000 0.917647 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default_ncl1_5-fx" name="_01 - Default_ncl1_5">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.117647 1.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.117647 1.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default_ncl1_6-fx" name="_01 - Default_ncl1_6">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.352941  0.000000 1.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.352941  0.000000 1.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default_ncl1_7-fx" name="_01 - Default_ncl1_7">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.917647  0.000000 1.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.917647  0.000000 1.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">2.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #9-fx" name="_01 - Default Slot #9">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #10-fx" name="_01 - Default Slot #10">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #9_ncl1_1-fx" name="_01 - Default Slot #9_ncl1_1">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #10_ncl1_1-fx" name="_01 - Default Slot #10_ncl1_1">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #9_ncl1_2-fx" name="_01 - Default Slot #9_ncl1_2">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #10_ncl1_2-fx" name="_01 - Default Slot #10_ncl1_2">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #9_ncl1_3-fx" name="_01 - Default Slot #9_ncl1_3">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_01 - Default Slot #10_ncl1_3-fx" name="_01 - Default Slot #10_ncl1_3">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.200000  0.200000 0.200000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.200000  0.200000 0.200000 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">20.000000</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Plane003-lib" name="Plane003Mesh">
+      <mesh>
+        <source id="Plane003-POSITION">
+          <float_array id="Plane003-POSITION-array" count="12">
+-10.000000 -0.984252 0.000000
+10.000000 -0.984252 0.000000
+-10.000000 0.984252 0.000000
+10.000000 0.984252 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane003-POSITION-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane003-Normal0">
+          <float_array id="Plane003-Normal0-array" count="18">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane003-Normal0-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane003-UV0">
+          <float_array id="Plane003-UV0-array" count="8">
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane003-UV0-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane003-VERTEX">
+          <input semantic="POSITION" source="#Plane003-POSITION"/>
+        </vertices>
+        <triangles count="2" material="_01 - Default"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p> 0 0 0 1 1 1 3 2 3 3 3 3 2 4 2 0 5 0</p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_1"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_2"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_3"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_4"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_5"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_6"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_7"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #9"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #10"><input semantic="VERTEX" offset="0" source="#Plane003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane003-UV0"/><p></p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Plane004-lib" name="Plane004Mesh">
+      <mesh>
+        <source id="Plane004-POSITION">
+          <float_array id="Plane004-POSITION-array" count="24">
+-0.019685 -0.019685 0.000000
+0.019685 -0.019685 0.000000
+-0.019685 0.019685 0.000000
+0.019685 0.019685 0.000000
+19.999960 -0.984252 0.000000
+39.999962 -0.984252 0.000000
+19.999960 0.984252 0.000000
+39.999962 0.984252 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane004-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane004-Normal0">
+          <float_array id="Plane004-Normal0-array" count="36">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane004-Normal0-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane004-UV0">
+          <float_array id="Plane004-UV0-array" count="16">
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Plane004-UV0-array" count="8" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane004-VERTEX">
+          <input semantic="POSITION" source="#Plane004-POSITION"/>
+        </vertices>
+        <triangles count="2" material="_01 - Default"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p> 4 0 4 5 1 5 7 2 7 7 3 7 6 4 6 4 5 4</p></triangles>
+        <triangles count="2" material="_01 - Default_ncl1_1"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p> 0 6 0 1 7 1 3 8 3 3 9 3 2 10 2 0 11 0</p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_2"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_3"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_4"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_5"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_6"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_7"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #9_ncl1_1"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #10_ncl1_1"><input semantic="VERTEX" offset="0" source="#Plane004-VERTEX"/><input semantic="NORMAL" offset="1" source="#Plane004-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Plane004-UV0"/><p></p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Cylinder002-lib" name="Cylinder002Mesh">
+      <mesh>
+        <source id="Cylinder002-POSITION">
+          <float_array id="Cylinder002-POSITION-array" count="120">
+9.973938 0.000000 0.000000
+9.485779 3.082116 0.000000
+8.069085 5.862534 0.000000
+5.862534 8.069085 0.000000
+3.082116 9.485779 0.000000
+0.000000 9.973938 0.000000
+-3.082117 9.485779 0.000000
+-5.862533 8.069085 0.000000
+-8.069086 5.862533 0.000000
+-9.485780 3.082114 0.000000
+-9.973938 -0.000003 0.000000
+-9.485777 -3.082121 0.000000
+-8.069082 -5.862538 0.000000
+-5.862528 -8.069090 0.000000
+-3.082108 -9.485782 0.000000
+0.000010 -9.973938 0.000000
+3.082127 -9.485775 0.000000
+5.862544 -8.069078 0.000000
+8.069093 -5.862523 0.000000
+9.485784 -3.082103 0.000000
+5.987855 -0.000002 0.000000
+5.694788 1.850349 0.000000
+4.844276 3.519572 0.000000
+3.519573 4.844276 0.000000
+1.850349 5.694788 0.000000
+0.000000 5.987854 0.000000
+-1.850349 5.694788 0.000000
+-3.519572 4.844276 0.000000
+-4.844277 3.519572 0.000000
+-5.694789 1.850348 0.000000
+-5.987855 -0.000001 0.000000
+-5.694787 -1.850352 0.000000
+-4.844274 -3.519576 0.000000
+-3.519569 -4.844279 0.000000
+-1.850344 -5.694790 0.000000
+0.000005 -5.987855 0.000000
+1.850355 -5.694786 0.000000
+3.519579 -4.844272 0.000000
+4.844280 -3.519566 0.000000
+5.694792 -1.850339 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Cylinder002-POSITION-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cylinder002-Normal0">
+          <float_array id="Cylinder002-Normal0-array" count="360">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Cylinder002-Normal0-array" count="120" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cylinder002-UV0">
+          <float_array id="Cylinder002-UV0-array" count="80">
+0.500000 1.000000
+0.345491 0.975528
+0.206107 0.904508
+0.095492 0.793893
+0.024472 0.654508
+0.000000 0.500000
+0.024472 0.345491
+0.095492 0.206107
+0.206107 0.095491
+0.345492 0.024472
+0.500000 0.000000
+0.654509 0.024472
+0.793893 0.095492
+0.904509 0.206108
+0.975528 0.345492
+1.000000 0.500000
+0.975528 0.654509
+0.904508 0.793893
+0.793892 0.904509
+0.654508 0.975528
+0.500000 1.000000
+0.345491 0.975528
+0.206107 0.904508
+0.095492 0.793893
+0.024472 0.654508
+0.000000 0.500000
+0.024472 0.345491
+0.095492 0.206107
+0.206107 0.095491
+0.345492 0.024472
+0.500000 0.000000
+0.654509 0.024472
+0.793893 0.095492
+0.904509 0.206108
+0.975528 0.345492
+1.000000 0.500000
+0.975528 0.654509
+0.904508 0.793893
+0.793892 0.904509
+0.654508 0.975528
+</float_array>
+          <technique_common>
+            <accessor source="#Cylinder002-UV0-array" count="40" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cylinder002-VERTEX">
+          <input semantic="POSITION" source="#Cylinder002-POSITION"/>
+        </vertices>
+        <triangles count="40" material="_01 - Default"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p> 21 0 21 0 1 0 1 2 1 0 3 0 21 4 21 20 5 20 2 6 2 21 7 21 1 8 1 21 9 21 2 10 2 22 11 22 22 12 22 2 13 2 23 14 23 2 15 2 3 16 3 23 17 23 4 18 4 23 19 23 3 20 3 23 21 23 4 22 4 24 23 24 5 24 5 24 25 24 4 26 4 24 27 24 5 28 5 25 29 25 26 30 26 5 31 5 6 32 6 5 33 5 26 34 26 25 35 25 7 36 7 26 37 26 6 38 6 26 39 26 7 40 7 27 41 27 7 42 7 28 43 28 27 44 27 28 45 28 7 46 7 8 47 8 8 48 8 9 49 9 29 50 29 8 51 8 29 52 29 28 53 28 29 54 29 9 55 9 30 56 30 9 57 9 10 58 10 30 59 30 11 60 11 30 61 30 10 62 10 30 63 30 11 64 11 31 65 31 12 66 12 32 67 32 11 68 11 11 69 11 32 70 32 31 71 31 13 72 13 32 73 32 12 74 12 32 75 32 13 76 13 33 77 33 14 78 14 33 79 33 13 80 13 33 81 33 14 82 14 34 83 34 14 84 14 35 85 35 34 86 34 35 87 35 14 88 14 15 89 15 35 90 35 16 91 16 36 92 36 16 93 16 35 94 35 15 95 15 36 96 36 16 97 16 37 98 37 16 99 16 17 100 17 37 101 37 18 102 18 37 103 37 17 104 17 37 105 37 18 106 18 38 107 38 39 108 39 18 109 18 19 110 19 18 111 18 39 112 39 38 113 38 0 114 0 39 115 39 19 116 19 39 117 39 0 118 0 20 119 20</p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_1"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_2"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_3"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_4"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_5"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_6"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_7"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #9_ncl1_2"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #10_ncl1_2"><input semantic="VERTEX" offset="0" source="#Cylinder002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Cylinder002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Cylinder002-UV0"/><p></p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Object002-lib" name="Object002Mesh">
+      <mesh>
+        <source id="Object002-POSITION">
+          <float_array id="Object002-POSITION-array" count="60">
+-1.504400 -7.427924 0.000000
+-1.992559 -4.345808 0.000000
+-3.409252 -1.565391 0.000000
+-5.615805 0.641161 0.000000
+-8.396222 2.057856 0.000000
+-11.478338 2.546015 0.000000
+-14.560455 2.057856 0.000000
+-17.340872 0.641161 0.000000
+-19.547424 -1.565392 0.000000
+-20.964119 -4.345810 0.000000
+-21.452276 -7.427927 0.000000
+-20.964115 -10.510045 0.000000
+-19.547421 -13.290462 0.000000
+-17.340866 -15.497014 0.000000
+-14.560447 -16.913706 0.000000
+-11.478329 -17.401863 0.000000
+-8.396212 -16.913700 0.000000
+-5.615795 -15.497003 0.000000
+-3.409245 -13.290447 0.000000
+-1.992554 -10.510027 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Object002-POSITION-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object002-Normal0">
+          <float_array id="Object002-Normal0-array" count="162">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Object002-Normal0-array" count="54" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object002-UV0">
+          <float_array id="Object002-UV0-array" count="56">
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+0.500000 1.000000
+0.345491 0.975528
+0.206107 0.904508
+0.095492 0.793893
+0.024472 0.654508
+0.000000 0.500000
+0.024472 0.345491
+0.095492 0.206107
+0.206107 0.095491
+0.345492 0.024472
+0.500000 0.000000
+0.654509 0.024472
+0.793893 0.095492
+0.904509 0.206108
+0.975528 0.345492
+1.000000 0.500000
+0.975528 0.654509
+0.904508 0.793893
+0.793892 0.904509
+0.654508 0.975528
+</float_array>
+          <technique_common>
+            <accessor source="#Object002-UV0-array" count="28" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Object002-VERTEX">
+          <input semantic="POSITION" source="#Object002-POSITION"/>
+        </vertices>
+        <triangles count="9" material="_01 - Default"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p> 6 0 14 7 1 15 8 2 16 8 3 16 9 4 17 10 5 18 6 6 14 8 7 16 10 8 18 10 9 18 11 10 19 12 11 20 12 12 20 13 13 21 14 14 22 10 15 18 12 16 20 14 17 22 6 18 14 10 19 18 14 20 22 6 21 14 14 22 22 15 23 23 5 24 13 6 25 14 15 26 23</p></triangles>
+        <triangles count="9" material="_01 - Default_ncl1_1"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p> 1 27 9 2 28 10 3 29 11 3 30 11 4 31 12 5 32 13 1 33 9 3 34 11 5 35 13 5 36 13 15 37 23 16 38 24 1 39 9 5 40 13 16 41 24 16 42 24 17 43 25 18 44 26 1 45 9 16 46 24 18 47 26 1 48 9 18 49 26 19 50 27 0 51 8 1 52 9 19 53 27</p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_2"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_3"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_4"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_5"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_6"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_7"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #9_ncl1_3"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #10_ncl1_3"><input semantic="VERTEX" offset="0" source="#Object002-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object002-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object002-UV0"/><p></p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Object003-lib" name="Object003Mesh">
+      <mesh>
+        <source id="Object003-POSITION">
+          <float_array id="Object003-POSITION-array" count="12">
+-21.407505 -17.289240 0.000100
+-18.651600 -17.289240 0.000100
+-21.407505 -14.533335 0.000100
+-18.651600 -14.533335 0.000100
+</float_array>
+          <technique_common>
+            <accessor source="#Object003-POSITION-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object003-Normal0">
+          <float_array id="Object003-Normal0-array" count="18">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Object003-Normal0-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object003-UV0">
+          <float_array id="Object003-UV0-array" count="8">
+0.000000 0.000000
+1.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Object003-UV0-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Object003-VERTEX">
+          <input semantic="POSITION" source="#Object003-POSITION"/>
+        </vertices>
+        <triangles count="0" material="_01 - Default"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_1"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="2" material="_01 - Default_ncl1_2"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p> 0 0 0 1 1 1 3 2 3 3 3 3 2 4 2 0 5 0</p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_3"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_4"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_5"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_6"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default_ncl1_7"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #9_ncl1_3"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+        <triangles count="0" material="_01 - Default Slot #10_ncl1_3"><input semantic="VERTEX" offset="0" source="#Object003-VERTEX"/><input semantic="NORMAL" offset="1" source="#Object003-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Object003-UV0"/><p></p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="poopy player 2" name="poopy player 2">
+      <node name="Plane003" id="Plane003" sid="Plane003"><matrix sid="matrix">1.000000 0.000000 0.000000 -18.984722 0.000000 1.000000 0.000000 -12.571859 0.000000 0.000000 1.000000 1.333510 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Plane003-lib"><bind_material><technique_common><instance_material symbol="_01 - Default" target="#_01 - Default"/><instance_material symbol="_01 - Default_ncl1_1" target="#_01 - Default_ncl1_1"/><instance_material symbol="_01 - Default_ncl1_2" target="#_01 - Default_ncl1_2"/><instance_material symbol="_01 - Default_ncl1_3" target="#_01 - Default_ncl1_3"/><instance_material symbol="_01 - Default_ncl1_4" target="#_01 - Default_ncl1_4"/><instance_material symbol="_01 - Default_ncl1_5" target="#_01 - Default_ncl1_5"/><instance_material symbol="_01 - Default_ncl1_6" target="#_01 - Default_ncl1_6"/><instance_material symbol="_01 - Default_ncl1_7" target="#_01 - Default_ncl1_7"/><instance_material symbol="_01 - Default Slot #9" target="#_01 - Default Slot #9"/><instance_material symbol="_01 - Default Slot #10" target="#_01 - Default Slot #10"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Plane004" id="Plane004" sid="Plane004"><matrix sid="matrix">1.000000 0.000000 0.000000 -48.984680 0.000000 1.000000 0.000000 -12.571859 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Plane004-lib"><bind_material><technique_common><instance_material symbol="_01 - Default" target="#_01 - Default"/><instance_material symbol="_01 - Default_ncl1_1" target="#_01 - Default_ncl1_1"/><instance_material symbol="_01 - Default_ncl1_2" target="#_01 - Default_ncl1_2"/><instance_material symbol="_01 - Default_ncl1_3" target="#_01 - Default_ncl1_3"/><instance_material symbol="_01 - Default_ncl1_4" target="#_01 - Default_ncl1_4"/><instance_material symbol="_01 - Default_ncl1_5" target="#_01 - Default_ncl1_5"/><instance_material symbol="_01 - Default_ncl1_6" target="#_01 - Default_ncl1_6"/><instance_material symbol="_01 - Default_ncl1_7" target="#_01 - Default_ncl1_7"/><instance_material symbol="_01 - Default Slot #9_ncl1_1" target="#_01 - Default Slot #9_ncl1_1"/><instance_material symbol="_01 - Default Slot #10_ncl1_1" target="#_01 - Default Slot #10_ncl1_1"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Cylinder002" id="Cylinder002" sid="Cylinder002"><matrix sid="matrix">1.000000 0.000000 0.000000 -18.984722 0.000000 1.000000 0.000000 -23.825806 0.000000 0.000000 1.000000 0.752099 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Cylinder002-lib"><bind_material><technique_common><instance_material symbol="_01 - Default" target="#_01 - Default"/><instance_material symbol="_01 - Default_ncl1_1" target="#_01 - Default_ncl1_1"/><instance_material symbol="_01 - Default_ncl1_2" target="#_01 - Default_ncl1_2"/><instance_material symbol="_01 - Default_ncl1_3" target="#_01 - Default_ncl1_3"/><instance_material symbol="_01 - Default_ncl1_4" target="#_01 - Default_ncl1_4"/><instance_material symbol="_01 - Default_ncl1_5" target="#_01 - Default_ncl1_5"/><instance_material symbol="_01 - Default_ncl1_6" target="#_01 - Default_ncl1_6"/><instance_material symbol="_01 - Default_ncl1_7" target="#_01 - Default_ncl1_7"/><instance_material symbol="_01 - Default Slot #9_ncl1_2" target="#_01 - Default Slot #9_ncl1_2"/><instance_material symbol="_01 - Default Slot #10_ncl1_2" target="#_01 - Default Slot #10_ncl1_2"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Object002" id="Object002" sid="Object002"><matrix sid="matrix">1.000000 0.000000 0.000000 -7.506382 0.000000 1.000000 0.000000 -16.397881 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Object002-lib"><bind_material><technique_common><instance_material symbol="_01 - Default" target="#_01 - Default"/><instance_material symbol="_01 - Default_ncl1_1" target="#_01 - Default_ncl1_1"/><instance_material symbol="_01 - Default_ncl1_2" target="#_01 - Default_ncl1_2"/><instance_material symbol="_01 - Default_ncl1_3" target="#_01 - Default_ncl1_3"/><instance_material symbol="_01 - Default_ncl1_4" target="#_01 - Default_ncl1_4"/><instance_material symbol="_01 - Default_ncl1_5" target="#_01 - Default_ncl1_5"/><instance_material symbol="_01 - Default_ncl1_6" target="#_01 - Default_ncl1_6"/><instance_material symbol="_01 - Default_ncl1_7" target="#_01 - Default_ncl1_7"/><instance_material symbol="_01 - Default Slot #9_ncl1_3" target="#_01 - Default Slot #9_ncl1_3"/><instance_material symbol="_01 - Default Slot #10_ncl1_3" target="#_01 - Default Slot #10_ncl1_3"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Object003" id="Object003" sid="Object003"><matrix sid="matrix">1.000000 0.000000 0.000000 -7.506382 0.000000 1.000000 0.000000 -16.397881 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Object003-lib"><bind_material><technique_common><instance_material symbol="_01 - Default" target="#_01 - Default"/><instance_material symbol="_01 - Default_ncl1_1" target="#_01 - Default_ncl1_1"/><instance_material symbol="_01 - Default_ncl1_2" target="#_01 - Default_ncl1_2"/><instance_material symbol="_01 - Default_ncl1_3" target="#_01 - Default_ncl1_3"/><instance_material symbol="_01 - Default_ncl1_4" target="#_01 - Default_ncl1_4"/><instance_material symbol="_01 - Default_ncl1_5" target="#_01 - Default_ncl1_5"/><instance_material symbol="_01 - Default_ncl1_6" target="#_01 - Default_ncl1_6"/><instance_material symbol="_01 - Default_ncl1_7" target="#_01 - Default_ncl1_7"/><instance_material symbol="_01 - Default Slot #9_ncl1_3" target="#_01 - Default Slot #9_ncl1_3"/><instance_material symbol="_01 - Default Slot #10_ncl1_3" target="#_01 - Default Slot #10_ncl1_3"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#poopy player 2"></instance_visual_scene>
+  </scene>
+</COLLADA>
