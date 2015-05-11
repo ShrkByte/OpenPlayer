@@ -6,6 +6,8 @@ OpenPlayer, the open-source sound player.
 Made by TT (titty.luv) with help from xrrawva.
 
 
+V1.7 Packed in a minified/obfuscated version that saves tones of memory, allowing for more loops to be indexed. The code however is impossible to read as a result. See https://github.com/ShrkByte/OpenPlayer for reference.
+
 V1.6 Axed public toggle in favor of two different versions, owner and public. This saves us soooo much memory. Used some of that free memory to add GESTURE CONTROLS!
 
 V1.5 Fixed persisent text displaying last selected rather than last played/playing. Fixed sorting stack heap collision when importing < ~400 sounds via transfer script. Added (optional) left-right scrolling click sounds.
