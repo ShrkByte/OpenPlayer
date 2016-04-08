@@ -229,6 +229,14 @@ default
         soundUpdate();
     }
     
+    on_rez(integer start)
+    {
+        if(updatecheck)
+        {
+            llMessageLinked(LINK_THIS,0,"updatepls","");
+        }
+    }
+    
     attach(key id)
     {
         if(updatecheck)
