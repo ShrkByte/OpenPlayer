@@ -5,6 +5,8 @@ OpenPlayer, the open-source sound player.
 
 Made by TT (titty.luv) with help from xrrawva.
 
+v2.0 After 5 years of being untouched, here's a version of openplayer with a public toggle built into the one unit, with a fixed/improved indexing method that theoretically can handle as many sounds as you can throw at it. Go nuts. Maybe more updates to come in the future? Who knows!!
+
 V1.8 Updating updater, in preparation for another update. Woo. Also pointing to new URLs for server.
 
 V1.7 Packed in a minified/obfuscated version that saves tones of memory, allowing for more loops to be indexed. The code however is impossible to read as a result. See https://github.com/ShrkByte/OpenPlayer for reference.
