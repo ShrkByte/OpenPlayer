@@ -31,6 +31,7 @@ integer local_update; // used for communicating with the transfer script.
 integer settings;
 integer looptogl;
 integer texttog;
+integer pubtog;
 integer volume;
 integer volumei;
 integer scroll;
@@ -45,9 +46,9 @@ integer settingstog = FALSE;
 integer looptog = TRUE;
 integer playing = FALSE;
 integer statictext = FALSE;
+integer pubtoggle = FALSE;
 
 // List population
-list sounds = [];
 integer totalsounds;
 
 // Scrolling/selection junk
@@ -93,19 +94,8 @@ soundUpdate() // updates the sound library
     if(llGetInventoryNumber(INVENTORY_SOUND) > 1)
     {
         llStopSound();
-        playindex = -100;
-        sounds = [];
+        playindex = 0;
         totalsounds = llGetInventoryNumber(INVENTORY_SOUND);
-        
-        integer j;
-        for(j = 0; j<totalsounds; j++)
-        {
-            sounds = sounds + [llGetInventoryName(INVENTORY_SOUND,j)];
-            llSetLinkPrimitiveParamsFast(scroll,[PRIM_TEXT,"[ "+(string)j+" / "+(string)totalsounds+" ] ",<1,1,1>,1]);
-        }
-        llSetLinkPrimitiveParamsFast(scroll,[PRIM_TEXT,"Sorting...",baseColor,1]);
-        sounds = llListSort(sounds,1,TRUE);
-        llSetLinkPrimitiveParamsFast(scroll,[PRIM_TEXT,"Finished!",baseColor,1]);
         showText = "Finished!";
         llSetTimerEvent(0.5);
     }
@@ -149,6 +139,10 @@ init() //Startup function, get link numbers and store them etc etc.
         {
             texttog = j;
         }
+        else if("pubtog" == llGetLinkName(j))
+        {
+            pubtog = j;
+        }
     }
     showText = "Loading...";
     llSetLinkPrimitiveParamsFast(scroll,[PRIM_TEXT,showText,baseColor,1,PRIM_LINK_TARGET,scrolli,PRIM_TEXT,"",<1,1,1>,1]);
@@ -161,6 +155,7 @@ init() //Startup function, get link numbers and store them etc etc.
     llSetLinkAlpha(volumei,0,ALL_SIDES);
     llSetLinkAlpha(looptogl,0,ALL_SIDES);
     llSetLinkAlpha(texttog,0,ALL_SIDES);
+    llSetLinkAlpha(pubtog,0,ALL_SIDES);
     
     if(looptog)
     {
@@ -177,6 +172,14 @@ init() //Startup function, get link numbers and store them etc etc.
     else
     {
         llSetLinkPrimitiveParamsFast(texttog,[PRIM_TEXTURE,ALL_SIDES,texttogtex,<0.4,0.9,0>,<-0.25,0,0>,0]);
+    }
+    if(pubtoggle)
+    {
+        llSetLinkPrimitiveParamsFast(pubtog,[PRIM_TEXTURE,ALL_SIDES,pubtogtex,<0.4,0.9,0>,<0.25,0,0>,0]);
+    }
+    else
+    {
+        llSetLinkPrimitiveParamsFast(pubtog,[PRIM_TEXTURE,ALL_SIDES,pubtogtex,<0.4,0.9,0>,<-0.25,0,0>,0]);
     }
     llStopSound();
     
@@ -276,7 +279,6 @@ default
     {
         if(ch == local_update && msg == "destinationpls")
         {
-            sounds = [];
             totalsounds = 0;
             index = 0;
             playindex = -100;
@@ -290,27 +292,27 @@ default
                 {
                     if(looptog)
                     {
-                        llLoopSound(llList2String(sounds,index),setvol);
-                        showText = "Playing: "+llList2String(sounds,index);
+                        llLoopSound(llGetInventoryName(INVENTORY_SOUND,index),setvol);
+                        showText = "Playing: "+llGetInventoryName(INVENTORY_SOUND,index);
                         displayText("",showText,TRUE,2.0,FALSE);
                         playindex = index;
-                        staticName = llList2String(sounds,playindex);
+                        staticName = llGetInventoryName(INVENTORY_SOUND,index);
                         playing = TRUE;
                     }
                     else
                     {
-                        llPlaySound(llList2String(sounds,index),setvol);
-                        showText = "Playing: "+llList2String(sounds,index);
+                        llPlaySound(llGetInventoryName(INVENTORY_SOUND,index),setvol);
+                        showText = "Playing: "+llGetInventoryName(INVENTORY_SOUND,index);
                         displayText("",showText,TRUE,2.0,FALSE);
                         playindex = index;
-                        staticName = llList2String(sounds,playindex);
+                        staticName = llGetInventoryName(INVENTORY_SOUND,index);
                         playing = TRUE;
                     }
                 }
                 else
                 {
                     llStopSound();
-                    showText = "Stopped: "+llList2String(sounds,playindex);
+                    showText = "Stopped: "+llGetInventoryName(INVENTORY_SOUND,index);
                     displayText("",showText,TRUE,2.0,FALSE);
                     staticName = "";
                     playindex = -100;
@@ -349,8 +351,8 @@ default
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,index)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,index);
                         }
                         else
                         {
@@ -358,19 +360,19 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-2)+"\n"+
-                        llList2String(sounds,totalsounds-1)+"\n \n"+ // skip middle line, that goes on scrolli to allow for colored text;
-                        llList2String(sounds,index+1)+"\n"+
-                        llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-2)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n \n"+ // skip middle line, that goes on scrolli to allow for colored text;
+                        llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,index+2);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                     if(index == 1)
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -378,12 +380,12 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-1)+"\n"+
-                        llList2String(sounds,0)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,index+1)+"\n"+
-                        llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,0)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,index+2);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                 }
                 else if(index > totalsounds-3)
@@ -392,8 +394,8 @@ default
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -401,19 +403,19 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-3)+"\n"+
-                        llList2String(sounds,totalsounds-2)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,0)+"\n"+
-                        llList2String(sounds,1);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-3)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-2)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,0)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,1);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                     if(index == totalsounds-2)
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -421,20 +423,20 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-4)+"\n"+
-                        llList2String(sounds,totalsounds-3)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,totalsounds-1)+"\n"+
-                        llList2String(sounds,0);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-4)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-3)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,0);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                 }
                 else
                 {
                     if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -442,12 +444,12 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,index-2)+"\n"+
-                    llList2String(sounds,index-1)+"\n \n"+ // skip middle line, that goes on scrolli;
-                    llList2String(sounds,index+1)+"\n"+
-                    llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,index-2)+"\n"+
+                    llGetInventoryName(INVENTORY_SOUND,index-1)+"\n \n"+ // skip middle line, that goes on scrolli;
+                    llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                    llGetInventoryName(INVENTORY_SOUND,index+2);
 
-                    displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                    displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                 }
             }
         }
@@ -455,7 +457,7 @@ default
     
     touch_start(integer num)
     {
-        if(llDetectedKey(0) == llGetOwner())
+        if(llDetectedKey(0) == llGetOwner() || pubtoggle == TRUE)
         {
             if(llDetectedLinkNumber(0) == LINK_ROOT)
             {
@@ -463,20 +465,20 @@ default
                 {
                     if(looptog)
                     {
-                        llLoopSound(llList2String(sounds,index),setvol);
-                        showText = "Playing: "+llList2String(sounds,index);
+                        llLoopSound(llGetInventoryName(INVENTORY_SOUND,index),setvol);
+                        showText = "Playing: "+llGetInventoryName(INVENTORY_SOUND,index);
                         displayText("",showText,TRUE,2.0,FALSE);
                         playindex = index;
-                        staticName = llList2String(sounds,playindex);
+                        staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         playing = TRUE;
                     }
                     else
                     {
-                        llPlaySound(llList2String(sounds,index),setvol);
-                        showText = "Playing: "+llList2String(sounds,index);
+                        llPlaySound(llGetInventoryName(INVENTORY_SOUND,index),setvol);
+                        showText = "Playing: "+llGetInventoryName(INVENTORY_SOUND,index);
                         displayText("",showText,TRUE,2.0,FALSE);
                         playindex = index;
-                        staticName = llList2String(sounds,playindex);
+                        staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         playing = TRUE;
                     }
                 }
@@ -485,7 +487,7 @@ default
                     llStopSound();
                     if(playindex > 0)
                     {
-                        showText = "Stopped: "+llList2String(sounds,playindex);
+                        showText = "Stopped: "+llGetInventoryName(INVENTORY_SOUND,playindex);
                         displayText("",showText,TRUE,2.0,FALSE);
                         staticName = "";
                     }
@@ -502,6 +504,7 @@ default
                     llSetLinkAlpha(volumei,0.9,ALL_SIDES);
                     llSetLinkAlpha(looptogl,1.0,ALL_SIDES);
                     llSetLinkAlpha(texttog,1.0,ALL_SIDES);
+                    llSetLinkAlpha(pubtog,1.0,ALL_SIDES);
                 }
                 else
                 {
@@ -509,6 +512,7 @@ default
                     llSetLinkAlpha(volumei,0,ALL_SIDES);
                     llSetLinkAlpha(looptogl,0,ALL_SIDES);
                     llSetLinkAlpha(texttog,0,ALL_SIDES);
+                    llSetLinkAlpha(pubtog,0,ALL_SIDES);
                 }
             }
             if(llDetectedLinkNumber(0) == looptogl && settingstog)
@@ -521,7 +525,7 @@ default
                     llSetLinkPrimitiveParamsFast(looptogl,[PRIM_TEXTURE,ALL_SIDES,looptogtex,<0.4,0.9,0>,<0.25,0,0>,0]);
                     if(playing)
                     {
-                        llLoopSound(llList2String(sounds,playindex),setvol);
+                        llLoopSound(llGetInventoryName(INVENTORY_SOUND,playindex),setvol);
                     }
                 }
                 else
@@ -531,7 +535,7 @@ default
                     llSetLinkPrimitiveParamsFast(looptogl,[PRIM_TEXTURE,ALL_SIDES,looptogtex,<0.4,0.9,0>,<-0.25,0,0>,0]);
                     if(playing)
                     {
-                        llPlaySound(llList2String(sounds,playindex),setvol);
+                        llPlaySound(llGetInventoryName(INVENTORY_SOUND,playindex),setvol);
                     }
                 }
             }
@@ -551,6 +555,22 @@ default
                     llSetLinkPrimitiveParamsFast(texttog,[PRIM_TEXTURE,ALL_SIDES,texttogtex,<0.4,0.9,0>,<-0.25,0,0>,0]);
                 }
             }
+            if(llDetectedLinkNumber(0) == pubtog && settingstog && llDetectedKey(0) == llGetOwner())
+            {
+                pubtoggle=!pubtoggle;
+                if(pubtoggle)
+                {
+                    showText = "[Public Mode]";
+                    displayText(showText,"",TRUE,1.0,FALSE);
+                    llSetLinkPrimitiveParamsFast(pubtog,[PRIM_TEXTURE,ALL_SIDES,pubtogtex,<0.4,0.9,0>,<0.25,0,0>,0]);
+                }
+                else
+                {
+                    showText = "[Owner Mode]";
+                    displayText(showText,"",TRUE,1.0,FALSE);
+                    llSetLinkPrimitiveParamsFast(pubtog,[PRIM_TEXTURE,ALL_SIDES,pubtogtex,<0.4,0.9,0>,<-0.25,0,0>,0]);
+                }
+            }
             if(llDetectedLinkNumber(0) == scroll)
             {
                 llResetTime();      
@@ -560,7 +580,7 @@ default
     
     touch_end(integer num)
     {
-        if(llDetectedKey(0) == llGetOwner())
+        if(llDetectedKey(0) == llGetOwner() || pubtoggle == TRUE)
         {
             if(llDetectedLinkNumber(0) == scroll)
             {
@@ -604,8 +624,8 @@ default
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -613,19 +633,19 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-2)+"\n"+
-                        llList2String(sounds,totalsounds-1)+"\n \n"+ // skip middle line, that goes on scrolli to allow for colored text;
-                        llList2String(sounds,index+1)+"\n"+
-                        llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-2)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n \n"+ // skip middle line, that goes on scrolli to allow for colored text;
+                        llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,index+2);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                     if(index == 1)
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -633,12 +653,12 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-1)+"\n"+
-                        llList2String(sounds,0)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,index+1)+"\n"+
-                        llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,0)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,index+2);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                 }
                 else if(index > totalsounds-3)
@@ -647,8 +667,8 @@ default
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -656,19 +676,19 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-3)+"\n"+
-                        llList2String(sounds,totalsounds-2)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,0)+"\n"+
-                        llList2String(sounds,1);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-3)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-2)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,0)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,1);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                     if(index == totalsounds-2)
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -676,20 +696,20 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-4)+"\n"+
-                        llList2String(sounds,totalsounds-3)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,totalsounds-1)+"\n"+
-                        llList2String(sounds,0);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-4)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-3)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,0);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                 }
                 else
                 {
                     if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -697,12 +717,12 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,index-2)+"\n"+
-                    llList2String(sounds,index-1)+"\n \n"+ // skip middle line, that goes on scrolli;
-                    llList2String(sounds,index+1)+"\n"+
-                    llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,index-2)+"\n"+
+                    llGetInventoryName(INVENTORY_SOUND,index-1)+"\n \n"+ // skip middle line, that goes on scrolli;
+                    llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                    llGetInventoryName(INVENTORY_SOUND,index+2);
 
-                    displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                    displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                 }
             }
         }
@@ -710,7 +730,7 @@ default
 
     touch(integer num)
     {
-        if(llDetectedKey(0) == llGetOwner())
+        if(llDetectedKey(0) == llGetOwner() || pubtoggle == TRUE)
         {
             if(llDetectedLinkNumber(0) == volume && settingstog)
             {
@@ -801,8 +821,8 @@ default
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -810,19 +830,19 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-2)+"\n"+
-                        llList2String(sounds,totalsounds-1)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,index+1)+"\n"+
-                        llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-2)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,index+2);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                     if(index == 1)
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -830,12 +850,12 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-1)+"\n"+
-                        llList2String(sounds,0)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,index+1)+"\n"+
-                        llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,0)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,index+2);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                 }
                 else if(index > totalsounds-3)
@@ -844,8 +864,8 @@ default
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -853,19 +873,19 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-3)+"\n"+
-                        llList2String(sounds,totalsounds-2)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,0)+"\n"+
-                        llList2String(sounds,1);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-3)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-2)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,0)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,1);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                     if(index == totalsounds-2)
                     {
                         if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -873,20 +893,20 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,totalsounds-4)+"\n"+
-                        llList2String(sounds,totalsounds-3)+"\n \n"+ // skip middle line, that goes on scrolli;
-                        llList2String(sounds,totalsounds-1)+"\n"+
-                        llList2String(sounds,0);
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-4)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-3)+"\n \n"+ // skip middle line, that goes on scrolli;
+                        llGetInventoryName(INVENTORY_SOUND,totalsounds-1)+"\n"+
+                        llGetInventoryName(INVENTORY_SOUND,0);
                         
-                        displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                        displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                     }
                 }
                 else
                 {
                     if(playindex >= 0)
                         {
-                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llList2String(sounds,playindex)+" \n \n";
-                            staticName = llList2String(sounds,playindex);
+                            showText = "[ "+(string)(index+1)+" / "+(string)totalsounds+" ]\n \nPlaying: "+llGetInventoryName(INVENTORY_SOUND,playindex)+" \n \n";
+                            staticName = llGetInventoryName(INVENTORY_SOUND,playindex);
                         }
                         else
                         {
@@ -894,12 +914,12 @@ default
                         }
 
                         showText += 
-                        llList2String(sounds,index-2)+"\n"+
-                    llList2String(sounds,index-1)+"\n \n"+ // skip middle line, that goes on scrolli;
-                    llList2String(sounds,index+1)+"\n"+
-                    llList2String(sounds,index+2);
+                        llGetInventoryName(INVENTORY_SOUND,index-2)+"\n"+
+                    llGetInventoryName(INVENTORY_SOUND,index-1)+"\n \n"+ // skip middle line, that goes on scrolli;
+                    llGetInventoryName(INVENTORY_SOUND,index+1)+"\n"+
+                    llGetInventoryName(INVENTORY_SOUND,index+2);
                     
-                    displayText(showText,llList2String(sounds,index)+"\n \n \n",TRUE,3.0,FALSE);
+                    displayText(showText,llGetInventoryName(INVENTORY_SOUND,index)+"\n \n \n",TRUE,3.0,FALSE);
                 }
             }
         }
